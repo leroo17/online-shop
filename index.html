@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WM-JS-FB</title>
+    <script src="./scripts/main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <div class="app" id="app">
+        <div class="container">
+            <div class="btnGroup">
+                <button class="btn" id="catalogBtn">Показать каталог</button>
+                <button class="btn" id="filterBtn">Показать фильтры</button>
+            </div>
+            <div class="catalogFilters" id="catalogFilters">
+                <div class="categorySelectBox">
+                    <h4>Категории товаров</h4>
+                    <select name="categorySelect" id="categorySelect">
+                        <option value="gameConsole">Игровая приставка</option>
+                        <option value="forPC">Периферия для ПК</option>
+                        <option value="gamesSoft">Игры и софт</option>
+                    </select>
+                </div>
+                <div class="priceInputBox">
+                    <h4>Фильтр по цене</h4>
+                    <div class="priceInputBoxInner">
+                        <input type="radio" name="priceInput" value="priceInput2000" id="priceInput2000">
+                        <label for="priceInput2000">до 2000 р.</label>
+                        <input type="radio" name="priceInput" value="priceInput5000" id="priceInput5000">
+                        <label for="priceInput5000">от 2000 до 5000 р.</label>
+                        <input type="radio" name="priceInput" value="priceInputMore5000" id="priceInputMore5000">
+                        <label for="priceInputMore5000">от 5000 р.</label>
+                    </div>
+                </div>
+                <div class="catalogFiltersOther">
+                    <div class="saleInputBox">
+                        <input type="checkbox" name="saleInput" id="saleInput" value="sale">
+                        <label for="saleInput">Со скидкой</label>
+                    </div>
+                    <div class="quantityInputBox">
+                        <input type="checkbox" name="quantityInput" id="quantityInput" value="inStock">
+                        <label for="quantityInput">В наличии</label>
+                    </div>
+                </div>
+                <button class="btn" type="submit">ФИЛЬТР</button>
+            </div>
+            <div id="catalog"></div>
+        </div>
+    </div>
+</body>
+</html>
