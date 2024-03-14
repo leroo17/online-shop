@@ -1,0 +1,76 @@
+{
+  "goods": [
+    {
+      "category": "Игровая приставка",
+      "id": 0,
+      "price": 3990,
+      "quantity": 24,
+      "sale": true,
+      "title": "Приставка игровая Dendy"
+    },
+    {
+      "category": "Игровая приставка",
+      "id": 1,
+      "price": 3990,
+      "quantity": 8,
+      "sale": false,
+      "title": "Игровая приставка Sony PlayStation 4 Pro"
+    },
+    {
+      "category": "Игровая приставка",
+      "id": 2,
+      "price": 16499,
+      "quantity": 10,
+      "sale": false,
+      "title": "Игровая приставка Sony PlayStation 3 Super Slim"
+    },
+    {
+      "category": "Игровая приставка",
+      "id": 3,
+      "price": 39990,
+      "quantity": 14,
+      "sale": false,
+      "title": "Игровая приставка Xbox One X"
+    },
+    {
+      "category": "Периферия для ПК",
+      "id": 4,
+      "price": 2390,
+      "quantity": 7,
+      "sale": false,
+      "title": "Клавиатура Logitech Wireless Keyboard K360"
+    },
+    {
+      "category": "Периферия для ПК",
+      "id": 5,
+      "price": 566,
+      "quantity": 27,
+      "sale": true,
+      "title": "Клавиатура Defender Element HB-195"
+    },
+    {
+      "category": "Периферия для ПК",
+      "id": 6,
+      "price": 1097,
+      "quantity": 27,
+      "sale": true,
+      "title": "Мышь Trust Varo"
+    },
+    {
+      "category": "Периферия для ПК",
+      "id": 7,
+      "price": 1279,
+      "quantity": 27,
+      "sale": true,
+      "title": "Коврик для мыши Orico MPA9040"
+    },
+    {
+      "category": "Игры и софт",
+      "id": 8,
+      "price": 1076,
+      "quantity": 27,
+      "sale": true,
+      "title": "Mortal Kombat X"
+    }
+  ]
+}
