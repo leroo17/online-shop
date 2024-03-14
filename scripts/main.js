@@ -3,7 +3,6 @@
 // TASKS:
 // 1. Фильтр - по категории, по скидке, по цене
 // 2. Поиск
-
 // 3. Добавление в корзину
 // 4. Отображение на карточке, сколько именно этого товара в корзине
 // 5. Покупка с очищением корзины, выводом сообщения в модальном окне и списанием с остатков (т.е. POST в БД - изменения количества)
@@ -18,15 +17,32 @@ function createCatalog(goods) {
         card.classList.add('goodsCard');
         const cardTags = document.createElement('div');
         cardTags.classList.add('cardTags');
+        const cardImg = document.createElement('img');
+        cardImg.classList.add('cardImg');
+        if (goodsItem.quantity === 0) {
+            cardImg.classList.add('grayscale');
+        }
+        cardImg.id = 'cardImg';
+        cardImg.src = './images/good.jpg';
+        card.appendChild(cardImg);
         card.insertAdjacentHTML('beforeend', `
-            <img src="../images/good.jpg" alt="goodsImg" class="cardImg">
             <div class="cardTitle">
                 <h3>${goodsItem.title}</h3>
             </div>
             <p><b>${goodsItem.price}</b> руб.</p>
             <p><i>Категория: ${goodsItem.category}</i></p>
-            <p>На складе: ${goodsItem.quantity}</p>
             `)  
+
+        if (goodsItem.quantity == 0) {
+            card.insertAdjacentHTML('beforeend', `
+                <p>Нет на складе</p>
+            `)
+        } else {
+
+            card.insertAdjacentHTML('beforeend', `
+            <p>На складе: ${goodsItem.quantity}</p>
+        `)
+        }
         const sale = document.createElement('div');
         if (goodsItem.sale) {
             sale.classList.add('sale');
@@ -83,4 +99,13 @@ function loading() {
     }, 1000);
 }
 
+function openFilters() {
+    const filterBtn = document.getElementById('filterBtn');
+    const catalogFilters = document.querySelector('#catalogFilters');
+    filterBtn.addEventListener('click', () => {
+        catalogFilters.classList.toggle('displayFlex')
+    });
+}
+
 loading();
+openFilters();
