@@ -104,6 +104,11 @@ function openFilters() {
     const catalogFilters = document.querySelector('#catalogFilters');
     filterBtn.addEventListener('click', () => {
         catalogFilters.classList.toggle('displayFlex')
+        if (filterBtn.innerText == 'ПОКАЗАТЬ ФИЛЬТРЫ') {
+            filterBtn.innerText = 'СКРЫТЬ ФИЛЬТРЫ'
+        } else {
+            filterBtn.innerText = 'ПОКАЗАТЬ ФИЛЬТРЫ'
+        }
     });
 }
 
